@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;1,200&display=swap');
+
+body {
+   background: radial-gradient(
+   #2c2d2f,
+   #111
+   );
+   margin: 0;
+   font-family: 'Raleway', sans-serif;
+   min-height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+* {
+   box-sizing: border-box;
+}
+
+.slider {
+   width: 90vw;
+   max-width: 43em;
+   height: 25em;
+   border-radius: 0.8em;
+   overflow: hidden;
+   box-shadow: 0 1em 1.5em rgba(0, 0, 0, 0.6);
+   position: relative;
+}
+
+.img-container {
+   position: absolute;
+   top: 0;
+   left: 0;
+   display: flex;
+   width: 300%;
+   height: 100%;
+   transition: 0.4s ease-in-out;
+}
+
+.img:nth-child(1) {
+   background: url(assets/dubai.jpg);
+}
+
+.img:nth-child(2) {
+   background: url(assets/swiss-alps.jpg);
+}
+
+.img:nth-child(3) {
+   background: url(assets/sahara.jpg);
+}
+
+.img-container .img {
+   width: 100%;
+   background-size: cover;
+}
+
+.caption {
+   background: linear-gradient(
+      0deg,
+      rgba(0,0,0,1),
+      rgba(0,0,0,0)
+      
+   );
+   width: 100%;
+   padding: 1em 1em 0.5em 1em;
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   text-align: center;
+   color: #fff;
+   letter-spacing: 1px;
+}
+
+.pagination {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 1em;
+   margin: 2em 0;
+}
+
+.pagination span {
+   background: #111;
+   box-shadow: 
+   inset -1px -1px #555,
+   inset 1px 1px #000;
+   width: 0.8em;
+   height: 0.8em;
+   border-radius: 50%;
+   cursor: pointer;
+}
+
+.pagination .active {
+   background: #fff;
+   box-sizing: 0 0 0.5em #0352fc;
+}
+
+@keyframes textChange {
+   50% {bottom: -5em;}
+   100% {bottom: 0;}
+}
